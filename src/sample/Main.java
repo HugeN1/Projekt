@@ -25,7 +25,7 @@ public class Main extends Application {
     private static final int liczbaWierszy = 6;
     private Karta wybrany = null;
     private int licznikKlikniec = 2;
-    static int pary = 0;
+    int pary = 0;
 
     private Parent tworzenieZawartosci() {
         Pane root = new Pane();
@@ -89,13 +89,18 @@ public class Main extends Application {
 
                         wybrany = null;
                         licznikKlikniec = 2;
+                        wygrana();
                     });
                 }
             });
 
             zamknięte();
         }
-
+        private void wygrana() {
+            if (pary == iloscPar) {
+                System.out.println("wygrałeś");
+            }
+        }
         public boolean jestOtwarte() {
             return tekst.getOpacity() == 1;
         }
@@ -121,13 +126,6 @@ public class Main extends Application {
 
 
     public static void main(String[] args) {
-        wygrana();
         launch(args);
-    }
-
-    private static void wygrana() {
-        if (pary == iloscPar) {
-            System.out.println("wygrałeś");
-        }
     }
 }
