@@ -5,19 +5,18 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
-import javafx.scene.shape.Rectangle;
-import javafx.scene.text.Text;
-import javafx.scene.text.Font;
-import javafx.util.Duration;
 
 
 public class Main extends Application {
@@ -66,7 +65,7 @@ public class Main extends Application {
             border.setFill(null);
             border.setStroke(Color.BLACK);
             tekst.setText(wartość);
-            tekst.setFont(Font.font(30));
+            tekst.setFont(Font.font(50));
             setAlignment(Pos.CENTER);
             getChildren().addAll(border, tekst);
 
