@@ -96,11 +96,13 @@ public class Main extends Application {
 
             zamknięte();
         }
+
         private void wygrana() {
             if (pary == iloscPar) {
                 System.out.println("wygrałeś");
             }
         }
+
         public boolean jestOtwarte() {
             return tekst.getOpacity() == 1;
         }
